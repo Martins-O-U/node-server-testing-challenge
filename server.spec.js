@@ -17,5 +17,12 @@ describe('server', () => {
         .expect('Content-Length', "38")
         .expect('Content-Type', /json/)
     })
+
+
+    it ("should return 200 http status code on successful get", () => {
+      return request(server).get("/api/friends").expect(200);
+    })
+
   })
 })
+
